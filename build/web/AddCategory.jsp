@@ -57,7 +57,7 @@
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
             <a class="navbar-brand" href="home">Home</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -72,7 +72,7 @@
         <br>
         <div class="container">
             <h3 class="mt-3" style="text-align: center;">Add Category</h3>
-            <form action="add-cate" class="text-center">
+            <form action="add-cate" method="get" class="text-center">
                 <div class="form-group">
                     <label for="cname">Category Name</label>
                     <input type="text" id="cname" name="cname" class="form-control" placeholder="Enter Category Name">
@@ -84,9 +84,24 @@
                         <option value="1">Active</option>
                     </select>
                 </div>
-                <button class="btn btn-info" type="submit">Submit</button>
+                <button class="btn btn-primary" type="submit">Submit</button>
             </form>
-            <h4 style="color: red; text-align: center">${requestScope.error}</h4>
+            <div id="error-message" style="display: none; color: red; text-align: center;">
+                <!-- Thông báo lỗi sẽ được hiển thị ở đây -->
+            </div>
         </div>
+        <script>
+            // Kiểm tra xem có lỗi nào từ requestScope không
+            var error1 = "${requestScope.error}";
+            var error2 = "${requestScope.error1}";
+
+            // Nếu có lỗi thì hiển thị thông báo
+            if (error1 || error2) {
+                var errorMessage = document.getElementById('error-message');
+                errorMessage.innerHTML = "Error: " + error1 + " " + error2;
+                errorMessage.style.display = 'block';
+            }
+        </script>
+
     </body>
 </html>

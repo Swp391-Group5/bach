@@ -39,11 +39,16 @@
         <ul class="navbar-nav m-auto">
             <li class="nav-item m-auto"><a class="nav-link text-white" href="adminDashboard"><i class="fa-solid fa-gauge-high"></i> <strong>Main dashboard </strong></a></li>
             <li class="nav-item m-auto"><a class="nav-link text-white" href="manager-product"><i class="fa-solid fa-cart-shopping"></i> <strong>Product Manager </strong></a></li>
+            <li class="nav-item m-auto"><a class="nav-link text-white" href="list-cate"><i class="fas fa-list-alt"></i> <strong>Category Manager </strong></a></li>
+            <li class="nav-item m-auto"><a class="nav-link text-white" href="slider-list"><i class="fas fa-images"></i> <strong>Slider Manager </strong></a></li>
+            <li class="nav-item m-auto"><a class="nav-link text-white" href="managerBlog"><i class="fa-solid fa-cart-shopping"></i> <strong>Blogs Manager </strong></a></li>
+            <li class="nav-item m-auto"><a class="nav-link text-white" href="ManageWarranty"><i class="fa-solid fa-user-gear"></i> <strong>Manager Warranty </strong></a></li>
             <li class="nav-item m-auto"><a class="nav-link text-white" href="userManager"><i class="fa-solid fa-user-gear"></i> <strong>User Manager </strong></a></li>
-<!--            <li class="nav-item m-auto"><a class="nav-link text-white" href="newOrders"><i class="fa-solid fa-cart-flatbed"></i> <strong>New orders </strong></a></li>
-            <li class="nav-item m-auto"><a class="nav-link text-white" href="revenue"><i class="fa-solid fa-money-bill-trend-up"></i> <strong>Revenue </strong></a></li>
-            <li class="nav-item m-auto"><a class="nav-link text-white" href="customers"><i class="fa-solid fa-address-book"></i> <strong>Customers </strong></a></li>-->
-            <li class="nav-item m-auto"><a class="nav-link text-white" href="feedback"><i class="fa-solid fa-comments"></i> <strong>Feedback </strong></a></li>
+            <li class="nav-item m-auto"><a class="nav-link text-white" href="orderManager"><i class="fa-solid fa-user-gear"></i> <strong>Order Manager </strong></a></li>
+            <li class="nav-item m-auto"><a class="nav-link text-white" href="adminFeedbackManager"><i class="fa-solid fa-comments"></i> <strong>Feedback Manager</strong></a></li>
+            <!--            <li class="nav-item m-auto"><a class="nav-link text-white" href="newOrders"><i class="fa-solid fa-cart-flatbed"></i> <strong>New orders </strong></a></li>
+                        <li class="nav-item m-auto"><a class="nav-link text-white" href="revenue"><i class="fa-solid fa-money-bill-trend-up"></i> <strong>Revenue </strong></a></li>
+                        <li class="nav-item m-auto"><a class="nav-link text-white" href="customers"><i class="fa-solid fa-address-book"></i> <strong>Customers </strong></a></li>-->
             <!--<li class="nav-item m-auto"><a class="nav-link text-white" href="orderTrend"><i class="fa-solid fa-chart-column"></i> <strong>Order trend</strong></a></li>-->
         </ul>
         <form action="search" method="post" class="my-2 my-lg-0 ms-3 d-flex justify-content-center">
@@ -71,7 +76,6 @@
         </form>  
     </div>
 </nav>
-                    <br>
 
 <script>
 //    var dropdownToggle = document.querySelector('.nav-link.dropdown-toggle');

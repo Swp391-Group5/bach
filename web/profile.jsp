@@ -80,7 +80,17 @@
                             </form>
 
                             <form action="<%=request.getContextPath()%>/sendOtp" method="post" class="mt-2 mb-2">
-                                <input type="hidden" name="email" value="${customer.customerEmail}">
+                                <c:choose>
+                                    <c:when test="${not empty customer.customerEmail}">
+                                        <input type="hidden" name="email" value="${customer.customerEmail}">
+                                    </c:when>
+                                    <c:when test="${not empty admin.adminEmail}">
+                                        <input type="hidden" name="email" value="${admin.adminEmail}">
+                                    </c:when>
+                                    <c:otherwise>
+                                        <input type="hidden" name="email" value="">
+                                    </c:otherwise>
+                                </c:choose>
                                 <input type="hidden" name="action" value="change">
                                 <button type="submit" class="btn btn-block btn-light">
                                     <i class="fa-solid fa-key"></i> Change Password

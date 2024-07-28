@@ -76,7 +76,7 @@
                             <div class="social-login">
                                 <span class="social-label">Or login with</span>
                                 <ul class="socials">
-                                    <li><a href="https://accounts.google.com/o/oauth2/auth?scope=email profile openid&redirect_uri=http://localhost:8080/ShoppingCart/LoginGoogleHandler&response_type=code&client_id=686103822563-2rqngvrua9nq1gv827vtj668bd8art8v.apps.googleusercontent.com&approval_prompt=force">
+                                    <li><a href="https://accounts.google.com/o/oauth2/auth?scope=email profile openid&redirect_uri=http://localhost:9999/FPTLaptopWeb/LoginGoogleHandler&response_type=code&client_id=18993437903-a13m7927ia5chiq6s9ih1cvrpodlbmi6.apps.googleusercontent.com">
                                             <i class="display-flex-center zmdi zmdi-google"></i></a></li>
 <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
                                     <li><a href="https://www.facebook.com/dialog/oauth?client_id=1802849310237929&redirect_uri=http://localhost:8080/ShoppingCart/LoginFacebookHandle&scope=email"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>

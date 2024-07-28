@@ -36,25 +36,36 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto">
             <li class="nav-item m-auto"><a class="nav-link text-white" href="home"><i class="fas fa-house"></i> <strong>Home page </strong></a></li>
-            <li class="nav-item m-auto"><a class="nav-link text-white" href="blog"><i class="fas fa-newspaper"></i> <strong>Blog </strong></a></li>
-            <li class="nav-item m-auto"><a class="nav-link text-white" href="blog"><i class="fas fa-shield-halved"></i> <strong>Warranty </strong></a></li>
-            <li class="nav-item m-auto"><a class="nav-link text-white" href="contacUs.jsp"><i class="fas fa-phone"></i> <strong>Contact Us </strong></a></li>
+            <li class="nav-item m-auto"><a class="nav-link text-white" href="blogs"><i class="fas fa-newspaper"></i> <strong>Blog </strong></a></li>
+            <li class="nav-item m-auto"><a class="nav-link text-white" href="FindWarranty.jsp"><i class="fas fa-shield-halved"></i> <strong>Warranty </strong></a></li>
+            <li class="nav-item m-auto"><a class="nav-link text-white" href="contact.jsp"><i class="fas fa-phone"></i> <strong>Contact Us </strong></a></li>
         </ul>
-        <form action="search" method="post" class="my-2 my-lg-0 ms-3 d-flex justify-content-center">
-            <div class="input-group input-group-sm">
-                <input oninput="searchByName(this)" value="" name="txt"
-                       type="text" class="form-control py-1 ps-2 pe-5 h-auto rounded"
-                       placeholder="Search...">
-                <div class="input-group-append">
-                    <button type="submit" class="btn btn-outline-light btn-number mr-3 px-3">
-                        <i class="fas fa-search" aria-hidden="true"></i>
-                    </button>
-                </div>
-            </div>
-            <a class="btn btn-light btn-sm py-2 px-0 w-50 h-25 ms-3 me-3" href="cart.jsp">
-                <i class="fas fa-cart-plus" style="margin-right: 5px;"></i>Cart
-                <span class="badge bg-light">${cart_list.size()}</span>
+
+        <form action="search"  class="my-2 my-lg-0 ms-3 d-flex justify-content-center">
+            <!--            <div class="input-group input-group-sm">
+                            <input name="productName" type="text" value="${pi}" class="form-control py-1 ps-2 pe-5 h-auto rounded"
+                                   placeholder="Search...">
+                            <div class="input-group-append">
+            
+                                <button type="submit" class="btn btn-outline-light btn-number mr-3 px-3">
+                                    <i class="fas fa-search" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>-->
+            <a class="btn btn-light btn-sm w-100 h-100 px-5 py-2 me-5 cart-btn position-relative " href="cart.jsp">
+                <i class="fa-solid fa-cart-plus" style="margin-right: 5px;"></i>Cart
+                <c:if test="${sessionScope.cart != null && sessionScope.cart.items.size() != 0}">
+                    <div class="">
+                        <span id="content" class="position-absolute top-0 start-100 bg-danger rounded-pill text-white px-2 py-1 translate-middle"> 
+                            ${sessionScope.cart == null ? "0" : sessionScope.cart.items.size()}
+                        </span>
+                    </div>
+                </c:if>
+
             </a>
+
+
+
             <ul class="navbar-nav m-2">
                 <li class="nav-item dropdown m-auto">
                     <a class="nav-link dropdown-toggle text-white p-0 me-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
